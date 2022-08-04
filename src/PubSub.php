@@ -24,8 +24,10 @@ class PubSub {
         } else if (is_null($this->client)) {
             $this->client = new Connection(
                 (new ConnectionOptions())
-                    ->setHost(env('NATS_HOST', "127.0.0.1"))
-                    ->setPort(env('NATS_PORT', 4222)));
+                ->setUser(env('NATS_USER', ""))
+                ->setPass(env('NATS_PASS', ""))
+                ->setHost(env('NATS_HOST', "127.0.0.1"))
+                ->setPort(env('NATS_PORT', 4222)));
 
             $this->client->connect();
         }
