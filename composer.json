@@ -1,5 +1,5 @@
 {
-    "name": "eventix/laravel-nats",
+    "name": "pengxul/laravel-nats",
     "description": "Package which makes talking to a nats.io instance easy",
     "type": "library",
     "require": {
